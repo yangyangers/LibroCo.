@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="icon" type="logo/icon" href="favicon.ico">
+    <title>LibroCo. | My Books</title>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <a class="navbar-brand" href="library.html"><img div class="logo" src="logo.png" width="250" height="50" /></a>
+
+        <div class="navbar-links">
+            <a href="library.html"> Library </a>
+            <a href="mybooks.html" class="active"> My Books </a>
+            <a href="wishlist.html"> Wishlist </a>
+        </div>
+
+        <div class="navbar-right">
+            <a href="profile.html"> Profile </a>
+            <a href="logout.html"> Log Out </a>
+        </div>
+    </nav>
+
+    <!-- Search bar -->
+    <div class="search-wrapper">
+        <div class="search-container">
+            <button class="menu-btn">&#9776;</button> <!-- Menu icon -->
+            <input type="text" placeholder="Search a book, author, or etc." id="search-input" class="search-input">
+            <button class="search-btn" onclick="searchBooks()">&#128269;</button> <!-- Search icon -->
+        </div>
+    </div>
+
+    <!-- Container for "My Books" list -->
+    <div class="container">
+        <div class="book-list">
+            <!-- First book -->
+            <div class="book-item" id="book1" data-due-date="2024-09-25">
+                <img src="book-cover.jpg" alt="Bridgerton Book Cover" class="book-cover">
+                <div class="book-details">
+                    <h2 class="book-title">BRIDGERTON</h2>
+                    <p>Julia Quinn</p>
+                </div>
+                <p class="status expiring">Expiring</p>
+                <button class="return" onclick="returnBook('book1')">Return</button>
+                <button class="renew" onclick="renewBook('book1')">Renew</button>
+            </div>
+
+            <!-- Second book -->
+            <div class="book-item" id="book2" data-due-date="2024-10-10">
+                <img src="book-cover.jpg" alt="Bridgerton Book Cover" class="book-cover">
+                <div class="book-details">
+                    <h2 class="book-title">BRIDGERTON</h2>
+                    <p>Julia Quinn</p>
+                </div>
+                <p class="status available">Available</p>
+                <button class="return" onclick="returnBook('book2')">Return</button>
+                <button class="renew" onclick="renewBook('book2')" disabled>Renew</button> <!-- Initially disabled -->
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
